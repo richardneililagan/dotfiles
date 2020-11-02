@@ -53,3 +53,4 @@ install src/starship .starship
 
 # :: directories
 install src/hooks .hooks
+install src/vim .vim
