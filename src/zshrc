@@ -1,0 +1,19 @@
+# :: path to oh-my-zsh installation
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"    # :: at least up until starship is installed
+
+# :: ---
+
+DISABLE_UPDATE_PROMPT="true"  # :: Update without having to prompt
+COMPLETION_WAITING_DOTS="true"  # :: Display dots while waiting for commands to complete
+DISABLE_UNTRACKED_FILES_DIRTY="true"  # :: don't mark VCS untracked files
+
+plugins=(git colored-man-pages colorize)
+
+# :: go go go
+source $ZSH/oh-my-zsh.sh
+
+# :: -----------------------------------------------------------------------------------
+# :: User configuration
+
+test -f $HOME/.profile && source $HOME/.profile

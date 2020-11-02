@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+test -f $HOME/.prompt && source $HOME/.prompt
+test -f $HOME/.aliases && source $HOME/.aliases
+test -f $HOME/.functions && source $HOME/.functions
+
+# :: -----------------------------------------------------------------------------------
+# :: devenv specific hooks
+
+# e.g. `hook nvm`
+function hook () {
+  test -f $HOME/.hooks/$@ && source $HOME/.hooks/$@
+}
+
+hook essentials
+hook iterm
+hook fzf
+
+hook volta    # :: JS
+hook pyenv    # :: Python
+hook rbenv    # :: Ruby
+hook rust     # :: Rust
+hook awscli   # :: AWS CLI

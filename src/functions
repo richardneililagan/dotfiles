@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# :: gitignore.io
+function gi() { curl -sL https://www.gitignore.io/api/$@ ; }
+
+# :: set the current AWS profile
+function aws_profile () {
+  export AWS_PROFILE=$@
+  export AWS_DEFAULT_PROFILE=$AWS_PROFILE
+}

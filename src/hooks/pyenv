@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# :: if pyenv is not installed, then attempt to install
+if ! [ -x "$(command -v pyenv)" ]; then
+  echo "$WARN[hook: pyenv]$RESET pyenv is not installed. Will install."
+  echo
+
+  git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT
+fi
+
+# :: if the virtualenv pyenv plugin is not installed,
+#    then attempt to install
+if ! pyenv commands | grep -q "^virtualenv$"; then
+  echo "$WARN[hook: pyenv]$RESET pyenv-virtualenv is not installed. Will install."
+  echo
+
+  git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+fi
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

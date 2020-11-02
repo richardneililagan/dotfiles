@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+# :: ensures core essentials are available in the shell.
+
+# :: homebrew
+if [ ! -x "$(command -v brew)" ] && [[ "$OS" == 'osx' ]]; then
+  echo "$WARN[hook:essentials]$RESET Will install homebrew."
+  echo
+
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+# :: attempt to determine packager command
+[ -x "$(command -v brew)" ] && VERB="brew"
+[ -x "$(command -v apt-get)" ] && VERB="apt-get"
+[ -x "$(command -v apt)" ] && VERB="apt"
+[ -x "$(command -v yum)" ] && VERB="yum"
+
+# :: unzip 
+if [ ! -x "$(command -v unzip)" ]; then
+  $VERB install unzip -y
+fi

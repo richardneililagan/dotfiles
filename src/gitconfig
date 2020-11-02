@@ -1,0 +1,27 @@
+[user]
+  name = Richard Neil Ilagan (Carding)
+  email = 705310+richardneililagan@users.noreply.github.com
+
+[core]
+  excludesfile = ~/.gitignore
+  trustctime = false
+  editor = vim
+  filemode = false
+
+[push]
+  default = simple
+
+[color]
+  ui = true
+
+[log]
+  decorate = short
+
+[alias]
+  pull = pull --ff-only
+  last = log -1 --stat
+  cp = cherry-pick
+  co = checkout
+  st = status -sb
+  br = branch
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all

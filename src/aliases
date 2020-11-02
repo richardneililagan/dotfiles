@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+alias ..='cd ..'
+
+alias d='git diff --word-diff $@'
+alias s='git status -sb'
+alias b='git branch -avv'
+alias a='git add'
+alias c='git commit -v'
+
+if [[ "$OS" == 'linux' ]]; then
+  alias l='ls -l --color --group-directories-first'
+  alias ll='l -ah'
+else
+  if [ -x "$(command -v gls)" ]; then
+    alias l='gls -l --color --group-directories-first'
+    alias ll='l -ah'
+  fi
+fi
