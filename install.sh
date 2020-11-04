@@ -49,6 +49,8 @@ install src/prompt .prompt
 install src/aliases .aliases
 install src/functions .functions
 
+install src/vimrc .vimrc
+
 install src/starship .starship
 
 # :: directories

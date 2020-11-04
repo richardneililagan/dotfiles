@@ -1,0 +1,47 @@
+" :: set <space> as the leader key
+let g:mapleader=' '
+let g:maplocalleader=','  " :: with a backup leader of <comma>
+
+" :: plugins start ---------------------------------------------------------------------
+call plug#begin('~/.vim/vendor')
+
+Plug 'tpope/vim-sensible'
+Plug 'rstacruz/vim-opinion'
+
+Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion'
+
+Plug 'sheerun/vim-polyglot'                         " :: syntax highlighting
+Plug 'dense-analysis/ale'                           " :: linting / LSE
+Plug 'tpope/vim-sleuth'                             " :: detect spaces or tabs
+Plug 'tpope/vim-fugitive'                           " :: git extensions
+Plug 'tpope/vim-commentary'                         " :: commenting QoL features
+Plug 'tpope/vim-surround'                           " :: wrapping features
+Plug 'tpope/vim-endwise'                            " :: ending / closing syntax
+
+Plug 'schickling/vim-bufonly'                       " :: 'close all other editors'
+Plug 'moll/vim-bbye'                                " :: closing buffers QoL features
+
+Plug 'preservim/nerdtree'                           " :: filelist sidebar
+Plug 'bagrat/vim-buffet'                            " :: tabs functionality
+Plug 'liuchengxu/vim-which-key'                     " :: cheatsheet
+Plug 'junegunn/goyo.vim'                            " :: zen-mode
+Plug 'ryanoasis/vim-devicons'                       " :: devicons on your files
+Plug 'mhinz/vim-startify'                           " :: start screen
+Plug 'wellle/context.vim'
+
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-tailwindcss',
+  \ 'coc-json',
+  \ 'coc-prettier',
+  \ 'coc-tsserver',
+  \ 'coc-emmet',
+  \ 'coc-yaml'
+  \ ]
+
+call plug#end()
+" :: /plugins end ----------------------------------------------------------------------
