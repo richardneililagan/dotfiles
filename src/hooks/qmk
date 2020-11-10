@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+export QMK_HOME=$HOME/dev/src/qmk_firmware

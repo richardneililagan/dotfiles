@@ -21,3 +21,4 @@ hook pyenv    # :: Python
 hook rbenv    # :: Ruby
 hook rust     # :: Rust
 hook awscli   # :: AWS CLI
+hook qmk      # :: QMK firmware
