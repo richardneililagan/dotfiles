@@ -3,7 +3,7 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # :: if rbenv is not installed, then attempt to install
-if ! [ -x "$(command -v volta)" ]; then
+if ! [ -x "$(command -v rbenv)" ]; then
   echo "$WARN"\[hook: rbenv\]"$RESET" rbenv is not installed. Will install.
   echo
 

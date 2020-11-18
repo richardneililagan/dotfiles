@@ -14,7 +14,7 @@ fi
 # :: if the virtualenv pyenv plugin is not installed,
 #    then attempt to install
 if ! pyenv commands | grep -q "^virtualenv$"; then
-  echo "$WARN[hook: pyenv]$RESET pyenv-virtualenv is not installed. Will install."
+  echo "$WARN"\[hook: pyenv\]"$RESET" pyenv-virtualenv is not installed. Will install.
   echo
 
   git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
