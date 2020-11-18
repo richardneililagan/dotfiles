@@ -1,5 +1,12 @@
 #!/usr/bin/env zsh
 
+# :: Attempt to detect OS
+if [[ `uname` == 'Linux' ]]; then
+  OS='linux'
+else
+  OS='osx'
+fi
+
 test -f $HOME/.prompt && source $HOME/.prompt
 test -f $HOME/.aliases && source $HOME/.aliases
 test -f $HOME/.functions && source $HOME/.functions
