@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # :: if rust is not installed, then attempt to install
 if ! [ -x "$(command -v rustc)" ]; then
   echo "$WARN"\[hook: rust\]"$RESET" rust is not installed. Will install.
