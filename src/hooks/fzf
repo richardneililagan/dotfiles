@@ -2,7 +2,7 @@
 
 # :: if fzf is not installed, then attempt to install
 if ! [ -f ~/.fzf.zsh ]; then
-  echo "$WARN[hook: fzf]$RESET fzf is not installed. Will install."
+  echo "$WARN"\[hook: fzf\]"$RESET" fzf is not installed. Will install.
   echo
 
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf

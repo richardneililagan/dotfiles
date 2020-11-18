@@ -2,7 +2,7 @@
 
 # :: if awscli is not installed, then attempt to install
 if ! [ -x "$(command -v aws)" ]; then
-  echo "$WARN[hook: awscli]$RESET awscli is not installed. Will install."
+  echo "$WARN"\[hook: awscli\]"$RESET" awscli is not installed. Will install.
   echo
 
   if [[ "$OS" == 'linux' ]]; then

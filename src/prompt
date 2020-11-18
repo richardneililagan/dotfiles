@@ -4,7 +4,7 @@ export STARSHIP_CONFIG=~/.starship
 
 # :: if starship is not installed, then attempt to install
 if ! [ -x "$(command -v starship)" ]; then
-  echo "$WARN[prompt]$RESET starship is not installed. Will install."
+  echo "$WARN"\[prompt\]"$RESET" starship is not installed. Will install.
   echo
 
   curl -fsSL https://starship.rs/install.sh | bash

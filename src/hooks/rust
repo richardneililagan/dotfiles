@@ -2,7 +2,7 @@
 
 # :: if rust is not installed, then attempt to install
 if ! [ -x "$(command -v rustc)" ]; then
-  echo "$WARN[hook: rust]$RESET rust is not installed. Will install."
+  echo "$WARN"\[hook: rust\]"$RESET" rust is not installed. Will install.
   echo
 
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

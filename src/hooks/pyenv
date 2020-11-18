@@ -5,7 +5,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # :: if pyenv is not installed, then attempt to install
 if ! [ -x "$(command -v pyenv)" ]; then
-  echo "$WARN[hook: pyenv]$RESET pyenv is not installed. Will install."
+  echo "$WARN"\[hook: pyenv\]"$RESET" pyenv is not installed. Will install.
   echo
 
   git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT
