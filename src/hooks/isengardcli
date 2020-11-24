@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+# :: only if isengardcli is installed
+if [ -x "$(command -v isengardcli)" ]; then
+  # :: shell autocompletion
+  eval "$(isengardcli shell-profile --keep-prompt)"
+
+  alias ig='isengardcli'
+fi
