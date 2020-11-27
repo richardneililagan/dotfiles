@@ -23,10 +23,12 @@ hook essentials
 hook iterm
 hook fzf
 
-hook brew     # :: OSX Homebrew
-hook volta    # :: JS
-hook pyenv    # :: Python
-hook rbenv    # :: Ruby
-hook rust     # :: Rust
-hook awscli   # :: AWS CLI
-hook qmk      # :: QMK firmware
+hook brew             # :: OSX Homebrew
+hook volta            # :: JS
+hook pyenv            # :: Python
+hook rbenv            # :: Ruby
+hook rust             # :: Rust
+hook awscli           # :: AWS CLI
+hook qmk              # :: QMK firmware
+
+hook isengardcli      # :: Isengard CLI
