@@ -1,12 +1,15 @@
 #!/usr/bin/env zsh
 
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# :: volta does not work on Arm architecture yet
+if ! [[ `uname -a` == 'aarch64' ]]; then
+  export VOLTA_HOME="$HOME/.volta"
+  export PATH="$VOLTA_HOME/bin:$PATH"
 
-# :: if volta is not installed, then attempt to install
-if ! [ -x "$(command -v volta)" ]; then
-  echo "$WARN"\[hook: volta\]"$RESET" volta is not installed. Will install.
-  echo
-
-  curl https://get.volta.sh | bash
+  # :: if volta is not installed, then attempt to install
+  if ! [ -x "$(command -v volta)" ]; then
+    echo "$WARN"\[hook: volta\]"$RESET" volta is not installed. Will install.
+    echo
+  
+    curl https://get.volta.sh | bash
+  fi
 fi
