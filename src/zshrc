@@ -2,6 +2,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"    # :: at least up until starship is installed
 
+export GPG_TTY=$(tty)
+
 # :: ---
 
 DISABLE_UPDATE_PROMPT="true"  # :: Update without having to prompt
