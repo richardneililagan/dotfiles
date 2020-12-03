@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# :: only if yarn is installed
+if [ -x "$(command -v yarn)" ]; then
+  export PATH="$PATH:`yarn global bin`"
+fi
