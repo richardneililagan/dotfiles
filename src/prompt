@@ -1,13 +1,17 @@
 #!/use/bin/env zsh
 
-export STARSHIP_CONFIG=~/.starship
+# :: starship does not work on Arm architecture
+if ! [[ `uname -m` == 'aarch64' ]]; then
+  export STARSHIP_CONFIG=~/.starship
 
-# :: if starship is not installed, then attempt to install
-# if ! [ -x "$(command -v starship)" ]; then
-#   echo "$WARN"\[prompt\]"$RESET" starship is not installed. Will install.
-#   echo
-# 
-#   curl -fsSL https://starship.rs/install.sh | bash
-# fi
-# 
-# eval "$(starship init zsh)"
+  # :: if starship is not installed, then attempt to install
+  if ! [ -x "$(command -v starship)" ]; then
+    echo "$WARN"\[prompt\]"$RESET" starship is not installed. Will install.
+    echo
+  
+    curl -fsSL https://starship.rs/install.sh | bash
+  fi
+  
+  eval "$(starship init zsh)"
+fi
+
