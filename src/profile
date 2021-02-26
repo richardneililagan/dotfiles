@@ -32,3 +32,4 @@ hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 
 hook isengardcli      # :: Isengard CLI
+hook builderhub       # :: BuilderHub

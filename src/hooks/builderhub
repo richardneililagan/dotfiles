@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+# :: only if Brazil is installed
+if [ -x "$(command -v brazil)" ]; then
+  alias bz='brazil'
+  alias bws='brazil workspace'
+fi
