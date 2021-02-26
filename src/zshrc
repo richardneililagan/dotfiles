@@ -19,6 +19,3 @@ source $ZSH/oh-my-zsh.sh
 # :: User configuration
 
 test -f $HOME/.profile && source $HOME/.profile
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH=$HOME/.toolbox/bin:$PATH

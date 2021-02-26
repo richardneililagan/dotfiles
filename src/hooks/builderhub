@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+# :: only if toolbox is installed
+if [ -x "$(command -v toolbox)" ]; then
+  export PATH=$HOME/.toolbox/bin:$PATH
+fi
+
 # :: only if Brazil is installed
 if [ -x "$(command -v brazil)" ]; then
   alias bz='brazil'
