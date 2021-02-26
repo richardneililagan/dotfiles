@@ -25,6 +25,7 @@ hook fzf
 
 hook brew             # :: OSX Homebrew
 hook volta            # :: JS
+hook yarn             # :: Yarn
 hook pyenv            # :: Python
 hook rbenv            # :: Ruby
 hook rust             # :: Rust
