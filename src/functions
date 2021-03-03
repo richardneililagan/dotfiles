@@ -8,3 +8,8 @@ function aws_profile () {
   export AWS_PROFILE=$@
   export AWS_DEFAULT_PROFILE=$AWS_PROFILE
 }
+
+# :: load a .env file into shell
+function dotenv () {
+  export $(grep -v '^#' $@ | xargs)
+}
