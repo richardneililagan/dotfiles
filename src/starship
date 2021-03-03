@@ -1,2 +1,8 @@
 # :: Starship prompt configuration.
 #    https://starship.rs/config/#prompt
+
+[kubernetes]
+symbol = ''
+format = '[$context \($namespace\)](dimmed green) '
+disabled = false
+
