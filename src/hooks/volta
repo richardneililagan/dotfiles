@@ -12,4 +12,21 @@ if ! [[ `uname -m` == 'aarch64' ]]; then
   
     curl https://get.volta.sh | bash
   fi
+
+else
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # :: This loads nvm
+
+  # :: if nvm is not installed, then attempt to install
+  if [ -z "$(command -v nvm)" ]; then
+    echo "$WARN"\[hook: nvm\]"$RESET" nvm is not installed. Will install.
+    echo
+
+    export NVM_DIR="$HOME/.nvm" && (
+      git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+      cd "$NVM_DIR"
+      git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+    ) && \. "$NVM_DIR/nvm.sh"
+  fi
 fi
