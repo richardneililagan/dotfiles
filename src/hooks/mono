@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# :: if mono is not installed, then attempt to install
+if ! [ -x "$(command -v mono)" ]; then
+  echo "$WARN"\[hook: mono\]"$RESET" mono is not installed. Will install.
+  echo
+
+  if [[ "$OS" == 'linux' ]]; then
+    
+  fi
+fi

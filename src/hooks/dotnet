@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+# :: only if dotnet is installed
+if [ -x "$(command -v dotnet)" ]; then
+  export DOTNET_ROOT="$HOME/.dotnet"
+  export PATH="$PATH:$DOTNET_ROOT/tools"
+fi

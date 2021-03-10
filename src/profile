@@ -29,6 +29,7 @@ hook yarn             # :: Yarn
 hook pyenv            # :: Python
 hook rbenv            # :: Ruby
 hook rust             # :: Rust
+hook dotnet           # :: Dotnet
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 
