@@ -11,4 +11,7 @@ if [[ "$OS" == 'osx' ]]; then
   if ! [ -x "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
+
+  # :: `homebrew doctor` complains if sbin/ is not in PATH.
+  export PATH="/usr/local/sbin:$PATH"
 fi
