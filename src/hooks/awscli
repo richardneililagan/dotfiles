@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# :: disable the AWS CLI pager
+export AWS_PAGER=""
+
 # :: if awscli is not installed, then attempt to install
 if ! [ -x "$(command -v aws)" ]; then
   echo "$WARN"\[hook: awscli\]"$RESET" awscli is not installed. Will install.
