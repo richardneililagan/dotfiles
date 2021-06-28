@@ -30,6 +30,7 @@ hook pyenv            # :: Python
 hook rbenv            # :: Ruby
 hook rust             # :: Rust
 hook dotnet           # :: .NET
+hook golang           # :: Go
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 

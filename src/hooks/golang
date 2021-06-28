@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+# :: only if golang is installed
+if [ -x "$(command -v go)" ]; then
+  export GOPATH=$HOME/golang-workspace
+  export GOROOT=/usr/local/opt/go/libexec
+
+  export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+fi

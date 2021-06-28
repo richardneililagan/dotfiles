@@ -16,6 +16,8 @@ detect_extensions = []
 disabled = true
 
 [aws]
-format = '[$symbol $profile \($region\)]($style)'
+format = '[$symbol $profile \($region\)]($style) '
 symbol = '🅰'
 
+[status]
+enabled = true
