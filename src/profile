@@ -10,6 +10,7 @@ fi
 test -f $HOME/.prompt && source $HOME/.prompt
 test -f $HOME/.aliases && source $HOME/.aliases
 test -f $HOME/.functions && source $HOME/.functions
+test -f $HOME/.profile.local && source $HOME/.profile.local
 
 # :: -----------------------------------------------------------------------------------
 # :: devenv specific hooks
