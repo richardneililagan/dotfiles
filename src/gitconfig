@@ -32,9 +32,17 @@
   st = status -sb
   br = branch
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+  s = switch
 
 [init]
 	defaultBranch = main
+
+[rerere]
+	enabled = true
+
+[include]
+  path = ~/.gitconfig.delta
+  path = ~/.gitconfig.local
 
 [secrets]
 	providers = git secrets --aws-provider
@@ -43,6 +51,3 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-
-[rerere]
-	enabled = true

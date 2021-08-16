@@ -2,11 +2,14 @@
 
 alias ..='cd ..'
 
-alias d='git diff --word-diff $@'
+# alias d='git diff --word-diff $@'
+alias d='git diff'
 alias s='git status -sb'
 alias b='git branch -avv'
 alias a='git add'
 alias c='git commit -v'
+alias gs='git switch'
+alias g='git'
 
 if [[ "$OS" == 'linux' ]]; then
   alias l='ls -l --color --group-directories-first'
