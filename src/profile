@@ -35,8 +35,9 @@ hook golang           # :: Go
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 
-# :: the delta hook has to be after the rust hook to be safe,
-#    since it falls back to using cargo
+# :: these hooks have to be after the rust hook to be safe,
+#    since they fall back to using cargo
+hook bat              # :: bat
 hook delta            # :: git-delta
 
 hook isengardcli      # :: Isengard CLI
