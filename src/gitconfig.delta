@@ -11,7 +11,7 @@
   features = decorations
   line-numbers = true
   side-by-side = true
-  syntax-theme = Monokai Extended
+  syntax-theme = gruvbox-dark
 
 [delta "interactive"]
   keep-plus-minus-markers = false
