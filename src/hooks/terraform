@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# :: only if terraform is installed
+if [ -x "$(command -v terraform)" ]; then
+  alias tf='terraform'
+fi

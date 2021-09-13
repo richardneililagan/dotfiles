@@ -34,6 +34,7 @@ hook dotnet           # :: .NET
 hook golang           # :: Go
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
+hook terraform        # :: Hashicorp Terraform
 
 # :: these hooks have to be after the rust hook to be safe,
 #    since they fall back to using cargo
