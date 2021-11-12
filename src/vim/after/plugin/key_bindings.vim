@@ -1,3 +1,7 @@
+if (g:colemak_dhm_enabled == 1)
+  finish
+endif
+
 " :: alternative insert mode toggles
 inoremap kj <Esc>
 inoremap jk <Esc>
