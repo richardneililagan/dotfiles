@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+if ! [ -x "$(command -v delta)" ]; then
+  echo "$WARN"\[hook: delta\]"$RESET" git-delta \(delta\) is not installed. Will install.
+  echo
+
+  if [[ "$OS" == 'osx' ]]; then
+    # :: OSX
+    brew install git-delta
+  elif [[ -x "$(command -v cargo)" ]]; then
+    # :: Windows / Linux
+    cargo install git-delta
+  else
+    echo "$WARN"\[hook: delta\]"$RESET" Manual install required.
+  fi
+fi

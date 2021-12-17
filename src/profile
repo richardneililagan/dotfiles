@@ -10,6 +10,7 @@ fi
 test -f $HOME/.prompt && source $HOME/.prompt
 test -f $HOME/.aliases && source $HOME/.aliases
 test -f $HOME/.functions && source $HOME/.functions
+test -f $HOME/.profile.local && source $HOME/.profile.local
 
 # :: -----------------------------------------------------------------------------------
 # :: devenv specific hooks
@@ -29,9 +30,16 @@ hook yarn             # :: Yarn
 hook pyenv            # :: Python
 hook rbenv            # :: Ruby
 hook rust             # :: Rust
-hook dotnet           # :: Dotnet
+hook dotnet           # :: .NET
+hook golang           # :: Go
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
+hook terraform        # :: Hashicorp Terraform
+
+# :: these hooks have to be after the rust hook to be safe,
+#    since they fall back to using cargo
+hook bat              # :: bat
+hook delta            # :: git-delta
 
 hook isengardcli      # :: Isengard CLI
 hook builderhub       # :: BuilderHub

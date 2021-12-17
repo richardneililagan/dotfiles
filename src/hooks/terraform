@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# :: only if terraform is installed
+if [ -x "$(command -v terraform)" ]; then
+  alias tf='terraform'
+
+  # :: enables terraform autocomplete
+  autoload -U +X bashcompinit && bashcompinit
+  complete -o nospace -C /usr/local/bin/terraform terraform
+fi

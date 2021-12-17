@@ -10,6 +10,6 @@ if exists('g:EasyMotion_loaded')
   noremap s <Plug>(easymotion-s)
 
   " :: use easymotion's (saner?) prev/next search result behavior
-  noremap n <Plug>(easymotion-next)
-  noremap N <Plug>(easymotio-prev)
+  " noremap n <Plug>(easymotion-next)
+  " noremap N <Plug>(easymotio-prev)
 endif

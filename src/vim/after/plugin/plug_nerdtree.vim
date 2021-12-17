@@ -13,4 +13,19 @@ if exists(':NERDTree')
 
   " :: show hidden files
   let g:NERDTreeShowHidden = 1
+
+  let NERDTreeMapOpenExpl = 'E'
+
+  call NERDTreeAddKeyMap({
+        \  'key': 'e',
+        \  'callback': {-> feedkeys("gk", 'int')},
+        \  'override': 1,
+        \  'scope': 'DirNode', 
+        \})
+  call NERDTreeAddKeyMap({
+        \  'key': 'e',
+        \  'callback': {-> feedkeys("gk", 'int')},
+        \  'override': 1,
+        \  'scope': 'FileNode', 
+        \})
 endif

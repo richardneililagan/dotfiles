@@ -43,6 +43,8 @@ install () {
 install src/gitconfig .gitconfig
 install src/gitignore .gitignore
 
+install src/gitconfig.delta .gitconfig.delta
+
 install src/zshrc .zshrc
 install src/profile .profile
 install src/prompt .prompt

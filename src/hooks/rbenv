@@ -11,3 +11,9 @@ if ! [ -x "$(command -v rbenv)" ]; then
 fi
 
 eval "$(rbenv init -)"
+
+# :: install ruby-build if it's not available so that `rbenv install` is available to us.
+if ! rbenv commands | grep install > /dev/null; then
+  mkdir -p "$(rbenv root)"/plugins
+  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+fi

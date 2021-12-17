@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+if ! [ -x "$(command -v bat)" ]; then
+  echo "$WARN"\[hook: bat\]"$RESET" bat is not installed. Will install.
+  echo
+
+  if [[ "$OS" == 'osx' ]]; then
+    # :: OSX
+    brew install bat
+  elif [[ -x "$(command -v cargo)" ]]; then
+    # :: Windows / Linux
+    cargo install --locked bat
+  else
+    echo "$WARN[hook: bat]$RESET Manual install required."
+  fi
+fi

@@ -2,11 +2,26 @@
 
 alias ..='cd ..'
 
-alias d='git diff --word-diff $@'
-alias s='git status -sb'
-alias b='git branch -avv'
-alias a='git add'
-alias c='git commit -v'
+if [ -x "$(command -v git)" ]; then
+  alias g='git'
+  alias d='git diff'
+  alias s='git status -sb'
+  alias a='git add'
+  alias c='git commit -v'
+  alias gb='git branch -avv'
+  alias gs='git switch'
+fi
+
+if [ -x "$(command -v bat)" ]; then
+  alias b='bat'
+fi
+
+if [ -x "$(command -v ddgr)" ]; then
+  alias @='ddgr -n 15 --colorize -r sg-en'
+  alias ddg='@'
+fi
+
+# :: ---
 
 if [[ "$OS" == 'linux' ]]; then
   alias l='ls -l --color --group-directories-first'

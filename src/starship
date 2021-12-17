@@ -1,2 +1,23 @@
 # :: Starship prompt configuration.
 #    https://starship.rs/config/#prompt
+
+[character]
+success_symbol = "[λ](bold green) "
+error_symbol = "[λ](bold red) "
+vicmd_symbol = "[·](bold green) "
+
+[kubernetes]
+symbol = ''
+format = '[$context \($namespace\)](dimmed green) '
+disabled = false
+
+[nodejs]
+detect_extensions = []
+disabled = true
+
+[aws]
+format = '[$symbol $profile \($region\)]($style) '
+symbol = '🅰'
+
+[status]
+enabled = true
