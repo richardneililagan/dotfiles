@@ -1,7 +1,7 @@
 " :: set <space> as the leader key
 let g:mapleader=' '
 let g:maplocalleader=','  " :: with a backup leader of <comma>
-let g:colemak_dhm_enabled=1 " :: set to 0 if not using a Colemak-dhM keyboard.
+let g:colemak_dhm_enabled=0 " :: set to 0 if not using a Colemak-dhM keyboard.
 
 " :: plugins start ---------------------------------------------------------------------
 call plug#begin('~/.vim/vendor')

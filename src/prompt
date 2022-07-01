@@ -1,31 +1,15 @@
 #!/use/bin/env zsh
 
 # :: starship does not work on Arm architecture
-if ! [[ `uname -m` == 'aarch64' ]]; then
-  export STARSHIP_CONFIG=~/.starship
+export STARSHIP_CONFIG=~/.starship
 
-  # :: if starship is not installed, then attempt to install
-  if ! [ -x "$(command -v starship)" ]; then
-    echo "$WARN"\[prompt\]"$RESET" starship is not installed. Will install.
-    echo
-  
-    curl -fsSL https://starship.rs/install.sh | bash
-  fi
-  
-  eval "$(starship init zsh)"
-else
-  fpath+=$HOME/.zsh/pure
-  autoload -U promptinit; promptinit
+# :: if starship is not installed, then attempt to install
+if ! [ -x "$(command -v starship)" ]; then
+  echo "$WARN"\[prompt\]"$RESET" starship is not installed. Will install.
+  echo
 
-  # :: if pure is not installed, then attempt to install
-  if ! [ "$(prompt -l | grep -c pure)" -ge 1 ]; then
-    echo "$WARN"\[prompt\]"$RESET" pure is not installed. Will install.
-    echo
-
-    mkdir -p "$HOME/.zsh"
-    git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-  fi
-
-  prompt pure
+  curl -fsSL https://starship.rs/install.sh | sh
 fi
+
+eval "$(starship init zsh)"
 
