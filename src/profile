@@ -25,13 +25,14 @@ hook iterm
 hook fzf
 
 hook brew             # :: OSX Homebrew
-hook volta            # :: JS
-hook yarn             # :: Yarn
-hook pyenv            # :: Python
-hook rbenv            # :: Ruby
+
+hook nodejs           # :: JS
+hook python           # :: Python
+hook ruby             # :: Ruby
 hook rust             # :: Rust
 hook dotnet           # :: .NET
 hook golang           # :: Go
+
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 hook terraform        # :: Hashicorp Terraform

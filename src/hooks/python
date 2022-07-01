@@ -29,6 +29,6 @@ if ! [ -x "$(command -v poetry)" ]; then
   echo "$WARN"\[hook: poetry\]"$RESET" poetry is not installed. Will install.
   echo
 
-  curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - --no-modify-path
+  curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 - --no-modify-path
 fi
 
