@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+# :: only if fvm is installed
+if [ -x "$(command -v fvm)" ]; then
+  alias f='flutter';
+  alias fl='fvm flutter';
+  alias dt='fvm dart';
+
+  export PATH="$HOME/fvm/default/bin:$PATH";
+fi

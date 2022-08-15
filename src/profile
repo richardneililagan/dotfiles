@@ -32,10 +32,12 @@ hook ruby             # :: Ruby
 hook rust             # :: Rust
 hook dotnet           # :: .NET
 hook golang           # :: Go
+hook flutter          # :: Flutter and Dart
 
 hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 hook terraform        # :: Hashicorp Terraform
+hook kubernetes       # :: Kubernetes
 
 # :: these hooks have to be after the rust hook to be safe,
 #    since they fall back to using cargo

@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+# :: Only if kubectl is installed.
+if [ -x "$(command -v kubectl)" ]; then
+  alias k=kubectl
+fi
+
+# :: Only if eksctl is installed.
+if [ -x "$(command -v eksctl)" ]; then
+  alias eks=eksctl
+fi
