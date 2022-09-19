@@ -38,6 +38,7 @@ hook awscli           # :: AWS CLI
 hook qmk              # :: QMK firmware
 hook terraform        # :: Hashicorp Terraform
 hook kubernetes       # :: Kubernetes
+hook vscode           # :: Visual Studio Code
 
 # :: these hooks have to be after the rust hook to be safe,
 #    since they fall back to using cargo

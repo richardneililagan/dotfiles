@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+# :: install Visual Studio Code shell integration
+# /bin/zsh -> zsh
+CURRENT_SHELL=${SHELL#*/bin/}
+[[ "$TERM_PROGRAM" == "vscode" ]] && \
+  . "$(code --locate-shell-integration-path $CURRENT_SHELL)"
