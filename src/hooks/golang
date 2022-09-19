@@ -2,8 +2,16 @@
 
 # :: only if golang is installed
 if [ -x "$(command -v go)" ]; then
-  export GOPATH=$HOME/golang-workspace
-  export GOROOT=/usr/local/opt/go/libexec
+  # export GOPATH=/usr/local/go
+  export GOROOT=/usr/local/go
+  export PATH=$PATH:$GOROOT/bin
 
-  export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+  # :: Go v1.13+ defaults to using an upstream proxy that is managed
+  #    by Google to fetch modules. This can be seen as a privacy risk.
+  #
+  #    The following line disables this behavior.
+  #
+  #    More information:
+  #    https://github.com/golang/go/issues/33985
+  go env -w GOPROXY=direct
 fi
