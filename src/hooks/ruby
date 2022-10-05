@@ -10,7 +10,7 @@ if ! [ -x "$(command -v rbenv)" ]; then
   git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 fi
 
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # :: install ruby-build if it's not available so that `rbenv install` is available to us.
 if ! rbenv commands | grep install > /dev/null; then
