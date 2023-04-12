@@ -17,3 +17,11 @@ if ! rbenv commands | grep install > /dev/null; then
   mkdir -p "$(rbenv root)"/plugins
   git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 fi
+
+alias be='bundle exec'
+
+# :: create rspec aliases 
+alias focus='rspec -t focus'
+if [ -x "$(command -v watch)" ] && [ -x "$(command -v unbuffer)" ]; then
+  alias focusw="watch -n 0.5 --color 'unbuffer rspec -t focus'"
+fi

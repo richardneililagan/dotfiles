@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+if [ -x "$(command -v docker)" ]; then
+  alias dk='docker'
+  alias dkc='docker compose'
+fi

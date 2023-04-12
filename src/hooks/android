@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+# :: ADB and Fastboot
+if [ -d "$HOME/dev/utils/adb-fastboot/platform-tools" ] ; then
+  export PATH="$HOME/dev/utils/adb-fastboot/platform-tools:$PATH"
+fi

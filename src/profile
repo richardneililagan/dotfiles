@@ -30,20 +30,23 @@ hook nodejs           # :: JS
 hook python           # :: Python
 hook ruby             # :: Ruby
 hook rust             # :: Rust
-hook dotnet           # :: .NET
-hook golang           # :: Go
-hook flutter          # :: Flutter and Dart
+# hook dotnet           # :: .NET
+# hook golang           # :: Go
+# hook flutter          # :: Flutter and Dart
 
 hook awscli           # :: AWS CLI
-hook qmk              # :: QMK firmware
-hook terraform        # :: Hashicorp Terraform
+# hook qmk              # :: QMK firmware
+# hook terraform        # :: Hashicorp Terraform
+
+hook docker           # :: Docker
 hook kubernetes       # :: Kubernetes
 hook vscode           # :: Visual Studio Code
+hook android          # :: Android tooling
 
 # :: these hooks have to be after the rust hook to be safe,
 #    since they fall back to using cargo
 hook bat              # :: bat
 hook delta            # :: git-delta
 
-hook isengardcli      # :: Isengard CLI
-hook builderhub       # :: BuilderHub
+# hook isengardcli      # :: Isengard CLI
+# hook builderhub       # :: BuilderHub
