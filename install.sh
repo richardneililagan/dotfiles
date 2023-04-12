@@ -55,6 +55,8 @@ install src/vimrc .vimrc
 
 install src/starship .starship
 
+test -f src/profile.local && install src/profile.local .profile.local
+
 # :: directories
 install src/hooks .hooks
 install src/vim .vim
