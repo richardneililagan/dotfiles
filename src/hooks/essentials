@@ -15,6 +15,7 @@ fi
 [ -x "$(command -v apt-get)" ] && VERB="apt-get"
 [ -x "$(command -v apt)" ] && VERB="apt"
 [ -x "$(command -v yum)" ] && VERB="yum"
+[ -x "$(command -v dnf)" ] && VERB="dnf"
 
 # :: unzip 
 if [ ! -x "$(command -v unzip)" ]; then
