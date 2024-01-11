@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export PATH="$HOME/.local/share/fnm:$PATH"
+
 # :: If fnm is not installed, then install
 if ! [ -x "$(command -v fnm)" ]; then
   echo "$WARN"\[hook: node\]"$RESET" fnm is not installed. Will install.
@@ -8,7 +10,7 @@ if ! [ -x "$(command -v fnm)" ]; then
   curl -fsSL https://fnm.vercel.app/install | bash
 fi
 
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env)"
 
 # :: only if yarn is installed
 if [ -x "$(command -v yarn)" ]; then
