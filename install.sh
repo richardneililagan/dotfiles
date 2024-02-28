@@ -51,7 +51,7 @@ install src/prompt .prompt
 install src/aliases .aliases
 install src/functions .functions
 
-install src/vimrc .vimrc
+# install src/vimrc .vimrc
 install src/nvim .config/nvim
 
 install src/starship .starship
@@ -60,4 +60,4 @@ test -f src/profile.local && install src/profile.local .profile.local
 
 # :: directories
 install src/hooks .hooks
-install src/vim .vim
+# install src/vim .vim
