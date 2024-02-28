@@ -52,6 +52,7 @@ install src/aliases .aliases
 install src/functions .functions
 
 install src/vimrc .vimrc
+install src/nvim .config/nvim
 
 install src/starship .starship
 
