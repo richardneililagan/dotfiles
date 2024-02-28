@@ -4,3 +4,8 @@
 if [ -d "$HOME/dev/utils/adb-fastboot/platform-tools" ] ; then
   export PATH="$HOME/dev/utils/adb-fastboot/platform-tools:$PATH"
 fi
+
+# :: SDK Manager
+if [ -d "$HOME/Library/Android/sdk/cmdline-tools" ] ; then
+  export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin:$PATH"
+fi

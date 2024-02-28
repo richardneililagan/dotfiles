@@ -25,3 +25,8 @@ alias focus='rspec -t focus'
 if [ -x "$(command -v watch)" ] && [ -x "$(command -v unbuffer)" ]; then
   alias focusw="watch -n 0.5 --color 'unbuffer rspec -t focus'"
 fi
+
+if [ -x "$(command -v forego)" ]; then
+  alias fgo='forego'
+  alias fgos='forego start -p 3000'
+fi

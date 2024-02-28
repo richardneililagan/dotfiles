@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+export VISUAL=vim
+export EDITOR=vim
+
 # :: Attempt to detect OS
 if [[ `uname` == 'Linux' ]]; then
   OS='linux'
@@ -36,7 +39,7 @@ hook rust             # :: Rust
 
 hook awscli           # :: AWS CLI
 # hook qmk              # :: QMK firmware
-# hook terraform        # :: Hashicorp Terraform
+hook terraform        # :: Hashicorp Terraform
 
 hook docker           # :: Docker
 hook kubernetes       # :: Kubernetes
