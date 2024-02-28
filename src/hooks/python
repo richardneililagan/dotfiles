@@ -25,11 +25,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # :: install poetry if it's not available
-# if ! [ -x "$(command -v poetry)" ]; then
-#   echo "$WARN"\[hook: poetry\]"$RESET" poetry is not installed. Will install.
-#   echo
+if ! [ -x "$(command -v poetry)" ]; then
+  echo "$WARN"\[hook: poetry\]"$RESET" poetry is not installed. Will install.
+  echo
 
-#   # curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 - --no-modify-path
-#   curl -sSL https://install.python-poetry.org | python3 -
-# fi
+  curl -sSL https://install.python-poetry.org | python3 - 
+fi
 

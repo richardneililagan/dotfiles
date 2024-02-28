@@ -3,6 +3,8 @@
 export VISUAL=vim
 export EDITOR=vim
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # :: Attempt to detect OS
 if [[ `uname` == 'Linux' ]]; then
   OS='linux'
