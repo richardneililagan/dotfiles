@@ -9,3 +9,20 @@ fi
 if [ -d "$HOME/Library/Android/sdk/cmdline-tools" ] ; then
   export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin:$PATH"
 fi
+
+# :: Emulator
+if [ -d "$HOME/Library/Android/sdk/emulator" ] ; then
+  export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
+  
+  # :: `emulator` is the Android Studio SDK emulator binary.
+  #    We set the DNS server to 10.0.2.2, which is the loopback interface for the host machine.
+  #    We assume that the host machine is running a DNS server (like `dnsmasq`) to precisely control webpage access.
+  #
+  #    Use with `android @<AVD name>`
+  #    
+  #    @example
+  #      android @PIXEL_8_PRO_API_35
+  if [ -x "$(command -v emulator)" ]; then
+    alias android='emulator -dns-server "192.168.20.8"'
+  fi
+fi
