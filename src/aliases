@@ -23,9 +23,9 @@ fi
 
 # :: ---
 
-if [ -x "$(command -v exa)" ]; then
-  # :: `exa` is cross platform.
-  alias l='exa -l --group-directories-first --git --no-permissions --no-user --icons --octal-permissions --no-filesize --time-style long-iso'
+if [ -x "$(command -v eza)" ]; then
+  # :: `eza` is cross platform.
+  alias l='eza -l --group-directories-first --git --no-permissions --no-user --icons --octal-permissions --no-filesize --time-style long-iso'
   alias ll='l -a'
 elif [[ "$OS" == 'linux' ]]; then
   alias l='ls -l --color --group-directories-first'
