@@ -16,3 +16,9 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 if [ -x "$(command -v yarn)" ]; then
   export PATH="$PATH:`yarn global bin`"
 fi
+
+# :: only if bun is installed
+if [ -x "$(command -v bun)" ]; then
+  # :: Bun completions
+  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+fi
