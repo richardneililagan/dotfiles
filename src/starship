@@ -1,26 +1,55 @@
 # :: Starship prompt configuration.
 #    https://starship.rs/config/#prompt
 
+continuation_prompt = '󰄾 '
+
 [character]
-success_symbol = "[λ](bold green) "
-error_symbol = "[λ](bold red) "
+# success_symbol = "[λ](bold green) "
+success_symbol = "[󰘧](bold green) "
+error_symbol = "[󰘧](bold red) "
 vicmd_symbol = "[·](bold green) "
 
+[docker_context]
+format = '[$symbol$context]($style) '
+symbol = '󰡨 '
+
 [kubernetes]
-symbol = ''
 format = '[$context \($namespace\)](dimmed green) '
+symbol = '󱃾 '
 disabled = false
 
 [nodejs]
+format = '[$symbol($version )]($style)'
 detect_extensions = []
-disabled = true
+disabled = false
+
+[ruby]
+format = '[$symbol($version )]($style) '
+symbol = ' '
+disabled = false
 
 [aws]
-format = '[$symbol $profile \($region\)]($style) '
-symbol = '🅰'
+format = '[$symbol( $profile )(\[$region\])]($style) '
+symbol = '󰸏 '
 
 [status]
+symbol = ' '
 disabled = false
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) 󰇘 '
+symbol = ' '
 
 [git_status]
 disabled = true
+
+[git_metrics]
+disabled = false
+
+[jobs]
+symbol = ''
+
+[terraform]
+format = '[$symbol$version\[$workspace\]]($style) '
+version_format = 'v${major}'
+symbol = '󱁢 '
