@@ -10,7 +10,7 @@ if ! [ -x "$(command -v fnm)" ]; then
   curl -fsSL https://fnm.vercel.app/install | bash
 fi
 
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # :: only if yarn is installed
 if [ -x "$(command -v yarn)" ]; then
