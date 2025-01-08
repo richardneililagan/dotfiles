@@ -1,9 +1,10 @@
 #!/usr/bin/env zsh
 
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 
 export PATH="$HOME/.local/bin:$PATH"
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=true
 
 # :: Attempt to detect OS
 if [[ `uname` == 'Linux' ]]; then
@@ -44,7 +45,7 @@ hook awscli           # :: AWS CLI
 hook terraform        # :: Hashicorp Terraform
 
 hook docker           # :: Docker
-hook kubernetes       # :: Kubernetes
+# hook kubernetes       # :: Kubernetes
 hook vscode           # :: Visual Studio Code
 hook android          # :: Android tooling
 
