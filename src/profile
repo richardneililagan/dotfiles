@@ -27,7 +27,7 @@ function hook () {
 }
 
 hook essentials
-hook iterm
+# hook iterm
 hook fzf
 
 hook brew             # :: OSX Homebrew
@@ -48,6 +48,8 @@ hook docker           # :: Docker
 # hook kubernetes       # :: Kubernetes
 hook vscode           # :: Visual Studio Code
 hook android          # :: Android tooling
+
+hook github           # :: Github CLI
 
 # :: these hooks have to be after the rust hook to be safe,
 #    since they fall back to using cargo
